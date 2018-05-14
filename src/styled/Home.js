@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 
 const Illustration = styled.img`
   position: absolute;
-  width: 50%;
+  width: 45%;
   right: 0;
 `
 
@@ -27,7 +27,7 @@ const Secondary = styled.h2`
   font-size: 1rem;
   font-weight: 300;
   color: #222;
-  margin-bottom: 8em;
+  margin-bottom: ${props => props.mb ? '8em' : '0em'}
 `
 
 const Button = styled.a`
@@ -51,10 +51,27 @@ const Button = styled.a`
   }
 `
 
+const SeeWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20vh;
+  }
+`
+
+const Arrow = styled.img`
+  transition: transform .2s ease-in-out;
+  &:hover {
+    transform: translateY(1em);
+  }
+`
+
 export {
   Wrapper,
   Illustration,
   Primary,
   Secondary,
   Button,
+  SeeWrapper,
+  Arrow,
 }
