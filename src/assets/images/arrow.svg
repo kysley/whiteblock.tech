@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="45px" viewBox="0 0 28 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-91.000000, -857.000000)">
+            <g id="Left" transform="translate(60.000000, 116.000000)">
+                <g id="arrow" transform="translate(33.000000, 741.000000)">
+                    <path d="M12,0 L12,0 C12.8284271,-1.52179594e-16 13.5,0.671572875 13.5,1.5 L13.5,41 L10.5,41 L10.5,1.5 C10.5,0.671572875 11.1715729,1.52179594e-16 12,0 Z" id="Rectangle-4" fill="#89B4A8" fill-rule="evenodd"></path>
+                    <polyline id="Path-3" stroke="#89B4A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="0 22 12 43 24 22"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
