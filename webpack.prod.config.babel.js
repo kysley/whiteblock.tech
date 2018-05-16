@@ -38,15 +38,9 @@ export default {
       minRatio: 0,
     }),
     new HtmlWebpackPlugin({
-      title: 'Whiteblock Capital',
+      title: 'Whiteblock Strategic Advisors',
       template: path.join(__dirname, 'src', 'index.ejs'),
       // favicon: path.join(__dirname, 'src', 'assets', 'img', 'favicon.ico'),
-      meta: [
-        {
-          name: 'WHITEBLOCK Capital',
-          content: 'Rebranding',
-        },
-      ],
       minify: {
         collapseWhitespace: true,
       },

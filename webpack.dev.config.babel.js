@@ -5,7 +5,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 // import InlineChunkManifestHtmlWebpackPlugin from 'inline-chunk-manifest-html-webpack-plugin'
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  title: 'Whiteblock Capital',
+  title: 'Whiteblock Strategic Advisors',
   template: path.join(__dirname, 'src', 'index.ejs'),
   // favicon: path.join(__dirname, 'src', 'assets', 'img', 'favicon.ico'),
   minify: {
