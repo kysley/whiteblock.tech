@@ -11,7 +11,7 @@ import arrow from '../assets/images/arrow.svg'
 const Home = () => (
   <Flex>
     <Box w={1} >
-      {/*<Header />*/}
+      <Header />
       <Illustration src={illustration} />
       <Wrapper>
         <Primary>Whiteblock is a full-service consulting agency servicing blockchain projects.</Primary>
@@ -20,19 +20,19 @@ const Home = () => (
           project’s entire lifecycle to promote it’s success.
         </Secondary>
         <Button href="mailto:bay@whiteblock.tech">Get in touch</Button>
-        <SeeWrapper>
+        {/* <SeeWrapper>
           <Secondary>See what makes us different</Secondary>
           <Arrow src={arrow} alt="More" />
-        </SeeWrapper>
+        </SeeWrapper> */}
       </Wrapper>
-      <BlockWrapper>
+      {/* <BlockWrapper>
         <Block>
           <BlockHeader>Project Optimization Strategies</BlockHeader>
         </Block>
         <Block>
           <BlockHeader>Project Optimization Strategies</BlockHeader>
         </Block>
-      </BlockWrapper>
+      </BlockWrapper> */}
     </Box>
   </Flex>
 )

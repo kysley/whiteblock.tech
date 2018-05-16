@@ -2,16 +2,24 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   padding-top: 5vh;
-  padding-left: 10vh;
+  padding-left: 5vw;
   // min-height: 100vh;
   // min-width: 100vw;
   width: 30vw;
+
+  @media(max-width: 812px) {
+    width: 50vw;
+  }
 `
 
 const Illustration = styled.img`
   position: absolute;
   width: 45%;
   right: 0;
+
+  @media(max-width: 812px) {
+    width: 50%;
+  }
 `
 
 const Primary = styled.h1`
