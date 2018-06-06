@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const HeaderWrapper = styled.div`
   display: inline-block;
-  padding-left: 5vw;
+  padding-left: 15vw;
   padding-top: 5vh;
 `
 

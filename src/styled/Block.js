@@ -1,16 +1,23 @@
 import styled from 'styled-components'
-import { Box } from 'grid-styled'
+import { Flex, Box } from 'grid-styled'
 
-const BlockWrapper = styled(Box)`
+import { theme } from 'Styled/Utils'
+
+const BlockWrapper = styled(Flex)`
   display: flex;
-  width: 70vw;
+  width: 65vw;
   flex-direction: row;
-  margin: 12vw auto 0 auto;
+  margin: 12vh auto 0 auto;
   margin-bottom: 15vh;
+
+  @media(max-width: 812px) {
+    width: 90vw;
+  }
 `
+
 const BlockHeader = styled.h2`
   font-family: Theinhardt-Bold;
-  font-size: 2rem;
+  font-size: ${theme.font.section};
   color: #fff;
   width: 25%;
   line-height: 1.15;
@@ -19,12 +26,12 @@ const BlockHeader = styled.h2`
 
 const BlockParagraph = styled.p`
   color: inherit;
-  font-size: 1.15rem;
+  font-size: ${theme.font.secondary};
   padding: 3rem;
 `
 
 const Block = styled(Box)`
-  border-radius: 3px;
+  border-radius: 4px 0px 0px 4px;
   display: flex;
   justify-content: ${props => props.pso ? 'flex-start' : 'center'};
   align-items: center;
