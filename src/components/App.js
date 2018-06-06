@@ -6,7 +6,6 @@ import Home from 'Presentational/Home'
 
 import TR from '../assets/fonts/Theinhardt-Regular.woff'
 import TB from '../assets/fonts/Theinhardt-Bold.woff'
-import AM from '../assets/fonts/akkurat-mono.ttf'
 
 injectGlobal`
   @font-face {
@@ -17,17 +16,15 @@ injectGlobal`
     font-family: Theinhardt-Bold;
     src: url(${TB}) format('woff');
   }
-  @font-face {
-    font-family: Akkurat;
-    src: url(${AM}) format('truetype');
-  }
   body {
     font-family: Theinhardt;
-    letter-spacing: 0.05rem;
+    letter-spacing: auto;
     line-height: 1.5em;
-    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

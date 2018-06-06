@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { HeaderWrapper, Logo } from 'Styled/Header'
+import { HeaderWrapper } from 'Styled/Header'
 import wblogo from '../assets/images/wblogo.svg'
 
 const Header = () => (
