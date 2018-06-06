@@ -4,6 +4,5 @@
     "transform-inline-environment-variables",
     "transform-class-properties",
     "transform-object-rest-spread",
-    "react-hot-loader/babel"
   ]
 }
