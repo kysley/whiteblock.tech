@@ -47,7 +47,7 @@ class Home extends React.Component {
             <Button href="mailto:bay@whiteblock.tech">Get in touch</Button>
             <SeeWrapper>
               <Secondary>See what makes us different</Secondary>
-              <Arrow src={arrow} alt="More" onClick={() => this.scrollDown()} />
+              <Arrow src={arrow} alt="More" onClick={this.scrollDown} />
             </SeeWrapper>
           </Wrapper>
           <ProjectsFirst id="scroll">
