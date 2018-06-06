@@ -7,7 +7,7 @@
   "keywords": [],
   "author": "Evan Kysley",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --colors --1--inline --progress --config webpack.dev.config.babel.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --colors --hot --inline --progress --config webpack.dev.config.babel.js",
     "build": "cross-env NODE_ENV=production webpack --mode production --color --progress --config webpack.prod.config.babel.js"
   },
   "dependencies": {
