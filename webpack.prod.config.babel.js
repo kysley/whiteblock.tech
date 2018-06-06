@@ -4,12 +4,14 @@ import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 // import InlineChunkManifestHtmlWebpackPlugin from 'inline-chunk-manifest-html-webpack-plugin'
 import WebpackChunkHash from 'webpack-chunk-hash'
-import CompressionPlugin from 'compression-webpack-plugin'
+import CompressionWebpackPlugin from 'compression-webpack-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
+import UglifyJSPlugin from 'uglifyjs-webpack-plugin'
 
 
 export default {
   entry: {
+    vendor: ['babel-polyfill', 'react', 'react-dom', 'react-router-dom', 'react-router', 'styled-components', 'grid-styled'],
     app: [
       'babel-polyfill',
       path.join(__dirname, 'src', 'index.js'),
@@ -28,21 +30,33 @@ export default {
       },
     }),
     new CleanWebpackPlugin(['dist']),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HashedModuleIdsPlugin(),
     new WebpackChunkHash(),
-    new CompressionPlugin({
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: /\.js$|\.css$|\.html$/,
-      threshold: 10240,
-      minRatio: 0,
-    }),
+    // new CompressionWebpackPlugin({
+    //   asset: '[path].gz[query]',
+    //   algorithm: 'gzip',
+    //   test: new RegExp('\\.(js|css)$'),
+    //   threshold: 10240,
+    //   minRatio: 0.8,
+    // }),
+
     new HtmlWebpackPlugin({
+      inject: true,
       title: 'Whiteblock Strategic Advisors',
       template: path.join(__dirname, 'src', 'index.ejs'),
       // favicon: path.join(__dirname, 'src', 'assets', 'img', 'favicon.ico'),
       minify: {
+        removeComments: true,
         collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
       },
     }),
     // new InlineChunkManifestHtmlWebpackPlugin({
@@ -71,21 +85,46 @@ export default {
         include: path.join(__dirname, 'src'),
       },
       {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        loader: 'image-webpack-loader',
+        enforce: 'pre',
+      },
+      {
         test: /\.(jpg|jpeg|png|gif)$/i,
         use: ['file-loader'],
         include: path.join(__dirname, 'src'),
       },
       {
-        test: /\.(eot|ttf|woff|woff2|svg)$/i,
+        test: /\.svg$/,
+        loader: 'svg-url-loader',
+        options: {
+          limit: 10 * 1024,
+          noquotes: true,
+        },
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/i,
         use: ['url-loader'],
         include: path.join(__dirname, 'src'),
       },
     ],
   },
   optimization: {
-    minimize: true,
+    concatenateModules: true,
+    minimizer: [
+      new UglifyJSPlugin({
+        sourceMap: true,
+        uglifyOptions: {
+          compress: {
+            inline: false,
+          },
+        },
+      }),
+    ],
+    runtimeChunk: false,
     splitChunks: {
       cacheGroups: {
+        default: false,
         commons: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
@@ -94,6 +133,5 @@ export default {
         },
       },
     },
-    concatenateModules: true, // ModuleConcatenationPlugin
   },
 }
