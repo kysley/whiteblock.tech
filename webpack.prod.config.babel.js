@@ -2,7 +2,6 @@ import path from 'path'
 
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-// import InlineChunkManifestHtmlWebpackPlugin from 'inline-chunk-manifest-html-webpack-plugin'
 import WebpackChunkHash from 'webpack-chunk-hash'
 import CompressionWebpackPlugin from 'compression-webpack-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
@@ -11,7 +10,7 @@ import UglifyJSPlugin from 'uglifyjs-webpack-plugin'
 
 export default {
   entry: {
-    vendor: ['babel-polyfill', 'react', 'react-dom', 'react-router-dom', 'react-router', 'styled-components', 'grid-styled'],
+    vendor: ['babel-polyfill', 'react', 'react-dom', 'react-router', 'styled-components', 'grid-styled'],
     app: [
       'babel-polyfill',
       path.join(__dirname, 'src', 'index.js'),
@@ -59,9 +58,6 @@ export default {
         minifyURLs: true,
       },
     }),
-    // new InlineChunkManifestHtmlWebpackPlugin({
-    //   dropAsset: true,
-    // }),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.scss', '.json'],
