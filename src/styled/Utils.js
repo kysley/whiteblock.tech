@@ -11,10 +11,11 @@ const theme = {
   },
   color: {
     darkPurple: '#4B5DAE',
-    lightPurple: '#6074c8',
+    lightPurple: '#6074C8',
     green: '#89B4A8',
     altTitle: '#1A2237',
     altSecondary: '#1E2845',
+    white: '#FFFFFF',
   },
 }
 
