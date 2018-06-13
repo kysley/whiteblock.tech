@@ -6,14 +6,16 @@ import { theme } from 'Styled/Utils'
 const CTAWrapper = Flex.extend`
   justify-content: center;
   margin-bottom: 10vh;
+  margin-top: ${props => props.about ? '10vh' : null};
 `
 
 const CTA = styled(Box)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${theme.color.lightPurple};
+  background: ${props => props.about ? '#fff' : `${theme.color.lightPurple}`};
   border-radius: ${props => props.button ? '0px 4px 4px 0px' : '4px 0px 0px 4px'};
+  // box-shadow: 0px 0px 15px 0px rgba(0,0,0,.07), 0px 18px 35px 0px rgba(50,50,93,.10);
 `
 
 const CTATitle = styled.h1`
@@ -28,7 +30,7 @@ const CTATitle = styled.h1`
 `
 
 const CTASubtitle = styled.span`
-  color: #fff;
+  color: ${props => props.about ? `${theme.color.darkPurple}` : '#fff'};
   display: block;
   font-weight: 400;
 `
