@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { injectGlobal } from 'styled-components'
 
 import Home from 'Presentational/Home'
+import About from 'Presentational/About'
 
 import TR from '../assets/fonts/Theinhardt-Regular.woff'
 import TB from '../assets/fonts/Theinhardt-Bold.woff'
@@ -43,6 +44,7 @@ class App extends React.Component {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
         </Switch>
       </Router>
     )
