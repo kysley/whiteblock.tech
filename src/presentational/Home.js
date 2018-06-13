@@ -4,7 +4,7 @@ import { Flex, Box } from 'grid-styled'
 import scrollIt from '../utils/scroll'
 
 import Header from 'Components/Header'
-import MiddleCTA from 'Components/MiddleCTA'
+import { HomeCTA } from 'Components/CTA'
 import Steps from 'Components/Steps'
 import Footer from 'Components/Footer'
 import {
@@ -107,7 +107,7 @@ class Home extends React.Component {
           <BackgroundFlair>
             <Steps />
           </BackgroundFlair>
-          <MiddleCTA />
+          <HomeCTA />
           {/* <Footer /> */}
         </Box>
       </Flex>
