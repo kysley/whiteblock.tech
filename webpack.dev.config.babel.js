@@ -30,6 +30,7 @@ export default {
   devServer: {
     contentBase: './src/',
     hot: true,
+    historyApiFallback: true,
   },
   plugins: [
     new webpack.DefinePlugin({
