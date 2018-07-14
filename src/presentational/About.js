@@ -21,7 +21,7 @@ const About = () => (
     <Box w={1}>
       <Header />
       <Illustration src={splash} />
-      <Wrapper>
+      <Wrapper flexWrap="wrap">
         <Primary>One Team, endless insight.</Primary>
         <Secondary>
           Whiteblock was created out of the necessity for blockchain startups
@@ -41,11 +41,11 @@ const About = () => (
         Menlo One.
       </SectionDesc>
       <BackgroundFlair />
-      <SectionWrapper>
-        <Block w={[1, 1, 1 / 2]}>
+      <SectionWrapper flexWrap="wrap">
+        <Block w={[1, 1, 1 / 2]} order={[1, 1, 1, 1]}>
           <BlockImage src={connection} />
         </Block>
-        <Block w={[1, 1, 1 / 2]}>
+        <Block w={[1, 1, 1 / 2]} order={[2, 2, 2, 2]}>
           <p>Our experiences in the blockchain space have created strong interpersonal
           networks with powerhouse influencers, VCs, and leading advisors. These
           connections help drive resources into projects Whiteblock undertakes
@@ -53,22 +53,22 @@ const About = () => (
         </Block>
       </SectionWrapper>
       <BackgroundFlair />
-      <SectionWrapper>
-        <Block w={[1, 1, 1 / 2]}>
+      <SectionWrapper flexWrap="wrap">
+        <Block w={[1, 1, 1 / 2]} order={[2, 2, 1, 1]}>
           <p>It is our belief that legitimacy and upstanding moral fiber are paramount
           to raising capital and being successful in the blockchain space. That is why
           Whiteblock operates with total transparency and ensures high quality
           deliverables throughout the process.</p>
         </Block>
-        <Block w={[1, 1, 1 / 2]}>
+        <Block w={[1, 1, 1 / 2]} order={[1, 1, 2, 2]}>
           <BlockImage src={transparency} />
         </Block>
       </SectionWrapper>
-      <SectionWrapper>
-        <Block w={[1, 1, 1 / 2]}>
+      <SectionWrapper flexWrap="wrap">
+        <Block w={[1, 1, 1 / 2]} order={[1, 1, 1, 1]}>
           <BlockImage src={innovation} />
         </Block>
-        <Block w={[1, 1, 1 / 2]}>
+        <Block w={[1, 1, 1 / 2]} order={[2, 2, 2, 2]}>
           <p>Today, Whiteblock is integrating original approaches and thanks to our unique
           experiences over several years in the industry, we bring to the table innovative
           insights, proven solutions, and lasting positive change for our clients.</p>

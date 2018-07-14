@@ -8,6 +8,11 @@ const Wrapper = styled.div`
   padding-left: 15vw;
   padding-bottom: 45vh;
   width: 40vw;
+
+  @media(max-width: 812px) {
+    width: 60vw;
+    padding-bottom: 15vh;
+  }
 `
 
 const Illustration = styled.img`
@@ -16,6 +21,10 @@ const Illustration = styled.img`
   right: 0;
   top: 0;
   z-index: -1;
+
+  @media(max-width: 812px) {
+    display: none;
+  }
 `
 
 const Primary = styled.h1`
@@ -26,6 +35,11 @@ const Primary = styled.h1`
   color: ${theme.color.white};
   display: inline-block;
   line-height: 1;
+
+  @media(max-width: 812px) {
+    color: #000;
+    width: 100%;
+  }
 `
 
 const Secondary = styled.h2`
@@ -34,6 +48,11 @@ const Secondary = styled.h2`
   font-weight: 300;
   width: 67%;
   color: ${theme.color.white};
+
+  @media(max-width: 812px) {
+    color: #000;
+    width: 100%;
+  }
 `
 
 const SectionWrapper = styled(Flex)`
@@ -43,6 +62,10 @@ const SectionWrapper = styled(Flex)`
   margin: 0 auto 0 auto;
   padding-top: 10vh;
   padding-bottom: 4vh;
+
+  @media(max-width: 812px) {
+    width: 100%;
+  }
 `
 
 const Block = styled(Box)`
